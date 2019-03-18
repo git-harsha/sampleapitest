@@ -4,7 +4,10 @@ How to run this sample api test:
 1. Clone this git repo
 2. Run the following Maven command at the root directory of the cloned copy:
 	mvn test -Dapi_key=<<YOUR API KEY>>
-3. Test report will be at available test-output/emailable-report.html
+3. Test report will be available at target/surefire-reports/emailable-report.html.
+
+In order to demonstrate how a failed test shows up in test report, one test has been  written in a way that it fails. The report shows the test failure with a message, which tells how json object in actual response differs from the expected:
+   "results[]: Expected 5 values but got 20 ; total_pages Expected: 1 got: 3; total_results Expected: 4 got: 52"
 
 Suggestions for further enhancement:
 1. Test data should be stored in an easily maintainable place like in database (or Excel file)
